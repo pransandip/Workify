@@ -1,0 +1,47 @@
+.footer-img-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0px 0;
+  height: 100px;
+  @media(min-width: 1660px){
+    height: 200px;
+  }
+  .login-logo{
+    height: 60px;
+    @media(min-width: 1660px){
+      height: 83px;
+    }
+  }
+}
+.login-footer-holder {
+  height: 50px;
+  background-color: var(--Primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 5px solid var(--nightGray);
+  @media(min-width: 1660px){
+    height: 60px;
+    border-bottom: 8px solid var(--nightGray);
+  }
+  @media (max-width:767px){
+    padding-left: 5px;
+    padding-right: 5px;
+    .footer-small{
+      padding: 0px 5px 0px 5px;
+    }
+  }
+  @media (max-width:380px){
+    padding-left: 0px;
+    padding-right: 0px;
+    .footer-small{
+      font-size: 11px;
+    }
+  }
+}

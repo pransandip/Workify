@@ -1,0 +1,25 @@
+.schdule-holder {
+  padding-bottom: 40px;
+  // .fc-button{
+  //   background-color: var(--Primary);
+  // }
+}
+.tooltip {
+  z-index: 99999;
+}
+.tooltip-inner {
+  background-color: var(--midGreen);
+  color: var(--white);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+}
+
+.fc-event-title-container:hover {
+  cursor: pointer;
+}
+.fc-event-time {
+  display: none;
+}

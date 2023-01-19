@@ -1,0 +1,56 @@
+
+.top-bg{
+  background-color: rgba(58, 177, 202, 0.3);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 379px;
+  z-index: 0;
+}
+.input-search{
+  min-width: 520px;
+  position: relative;
+  margin: 0px 0px !important;
+}
+.hs-tabs-hldr{
+  margin-top: 34px;
+  .MuiTabs-indicator{
+    height: 0px;
+  }
+}
+.hs-tabs{
+  &.Mui-selected{
+    background-color: var(--white) !important;
+    text-decoration: underline;
+    border-radius: 8px 8px 0 0px;
+  }
+  width: 246px;
+  height: 46px;
+  font-size: 16px !important;
+  color: var(--black) !important;
+  text-transform: capitalize !important;
+  
+}
+.hs-containpadding{
+  padding: 0 40px;
+}
+.hs-containpadding{
+  .MuiAccordionSummary-gutters{
+    min-height: 64px;
+  }
+  .MuiTypography-body1{
+    .Labels__LabelProvider-sc-1uibih1-1{
+      font-weight: 500;
+    }
+  }
+  .MuiListItemButton-gutters{
+    .Labels__LabelProvider-sc-1uibih1-1{
+      font-weight: 400;
+    }
+  }
+  .css-6bxxch-MuiPaper-root-MuiAccordion-root:before{
+    height: 2px;
+    background-color: rgba(151, 151, 151, 1);
+  }
+}

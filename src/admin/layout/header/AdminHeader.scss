@@ -1,0 +1,76 @@
+.main-header {
+  position: fixed;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--mainlightGray);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  padding: 16px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  @media (min-width: 1660px) {
+    height: 96px;
+  }
+  .profile-box {
+    display: flex;
+    height: 40px;
+    background: rgba(58, 177, 202, 0.3);
+    border-radius: 5px;
+    margin-left: 30px;
+    padding-right: 8px;
+    padding-left: 8px;
+    @media (min-width: 1660px) {
+      height: 50px;
+    }
+    .round-icon34 {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      @media (min-width: 1660px) {
+        width: 34px;
+        height: 34px;
+      }
+    }
+    .profile-name {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 14px;
+      padding: 5px 10px;
+      font-weight: 500;
+      @media (min-width: 1660px) {
+        font-size: 18px;
+        width: auto;
+      }
+    }
+  }
+}
+.MuiPaper-root.MuiPaper-elevation.MuiMenu-paper {
+  box-shadow: none;
+  width: 163px;
+  margin-left: -5px;
+  border: 1px solid var(--Primary);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.MuiMenu-list {
+  .MuiMenuItem-root {
+    min-height: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 15px;
+  }
+}
+.status {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 6px;
+}

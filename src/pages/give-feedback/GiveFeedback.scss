@@ -1,0 +1,26 @@
+.givefeedback-holder{
+  .top-bg{
+    background-color: rgba(58, 177, 202, 0.3);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 272px;
+    z-index: 0;
+    &~div{
+      position: relative;
+    }
+  }
+  .textareafield.textarea{
+    min-height: 44px;
+  }
+  .max-width620{
+    max-width:620px;
+    margin: auto;
+  }
+  .grid-item{
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+  }
+}

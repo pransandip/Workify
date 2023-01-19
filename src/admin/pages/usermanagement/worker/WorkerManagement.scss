@@ -1,0 +1,178 @@
+.dropdownitem-td{
+    width: 130px;
+    .MuiFormControl-root.MuiTextField-root.textfield{
+        width: 100%;
+    }
+}
+.filteblock-rgt{
+    display: flex;
+    align-items: center;
+    .filtercol {
+        width: 185px;
+        margin-left: 25px;
+        &.filtercol-search{
+            width: 250px;
+            position: relative;
+            .filtersearchicon {
+                position: absolute;
+                right: 10px;
+                top: 11px;
+            }
+        }
+        .MuiSelect-select{
+            text-align: left;
+            color: rgba(0, 0, 0, 0.87);
+            em{
+                font-style: normal;
+            }
+        }
+    }
+    .grid-item {
+        margin-bottom: 0;
+    }
+}
+
+.admin-listing-holder{
+    .MuiGrid-root.MuiGrid-item{
+      margin: 0px 0px 10px 0px;
+    }
+    .MuiTableContainer-root{
+      box-shadow: none !important;
+      .MuiTable-root{
+        // width: calc(100% - 30px);
+        // min-width: calc(100% - 30px);
+        margin: auto;
+        .MuiTableHead-root{
+          background: var(--neutrallightGray);
+          .MuiTableCell-head{
+            font-size: 14px;
+            font-family: 'Roboto';
+            font-weight: 700;
+            color: var(--nightGray);
+            @media (min-width: 1660px){
+              font-size:16px;
+            }
+            @media(max-width:1199px){
+              white-space: nowrap;
+            }
+          }
+        }
+        .MuiTableCell-body{
+          font-size: 14px;
+          font-family: 'Roboto';
+          font-weight: 400;
+          color: var(--nightGray);
+          padding: 9px 16px;
+          @media (min-width: 1660px){
+            font-size:16px;
+          }
+          @media(max-width:1199px){
+            white-space: nowrap;
+          }
+          a{
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            @media (min-width: 1660px){
+              font-size:16px;
+            }
+            &.edit-color{
+              color: var(--blue);
+            }
+            &.delete-color{
+              color: var(--error);
+            }
+          }
+          .cenerLine{
+            color: #8A8A8A;
+            display: inline-block;
+            margin: 0px 8px;
+          }
+        }
+      }
+    }
+    .grid-item{
+      margin-bottom: 0px;
+    }
+  }
+  .grid-item{
+    margin-bottom: 16px;
+  }
+  .mobile-parent-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .mobile-div{
+      width:120px;
+      margin-right: 12px;
+    }
+  }
+  .role-div{
+    width: 234px;
+  }
+  .heading30{
+    font-size: 24px;
+    font-weight: 700;
+    @media (min-width: 1660px){
+      font-size:30px;
+    }
+    .icon60{
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+  
+
+  .expTabs-rw{
+      display: flex;
+      align-items: center;
+    .expTabs-col {
+        background: #002e6d;
+        color: #fff;
+        padding: 0px 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        height: 36px;
+        line-height: 36px;
+        margin-right: 10px;
+    }
+  }
+.edit-pg-holder{
+    .MuiFormControl-root.css-vamk89-MuiFormControl-root {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }
+
+  .uploadPhoto-block {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border: 1px solid var(--gray97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+     .crose-icon {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+        cursor: pointer;
+    }
+    input {
+        position: absolute;
+        height: 100%;
+        padding: 0 !important;
+        font-size: 0 !important;
+        margin: 0 !important;
+        cursor: pointer;
+        opacity: 0;
+    }
+} 

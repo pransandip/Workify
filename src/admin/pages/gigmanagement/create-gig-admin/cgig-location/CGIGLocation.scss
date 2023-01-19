@@ -1,0 +1,108 @@
+.cgig-overview-main-holder {
+    .overview-box {
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        border-radius: 0.25rem;
+        border: 1px solid var(--gray97);
+        padding: 20px 20px;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        box-sizing: border-box;
+        @media (max-width: 767px) {
+            padding: 20px 15px;
+        }
+    }
+    .table-type-parent {
+        width: 100%;
+        overflow: auto;
+        .table-type-head {
+            border-bottom: 1px solid var(--gray97);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 5px;
+            .table-heading {
+                font-weight: 500;
+                font-size: 16px;
+                color: var(--gray97);
+                margin: 0px 0px 6px 0px;
+                &:first-child {
+                    width: calc(220px - 33px);
+                    padding-left: 33px;
+                }
+            }
+        }
+        .table-type-body {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            &:last-child {
+                padding-bottom: 10px;
+            }
+            .table-text {
+                font-weight: 500;
+                font-size: 16px;
+                margin: 8px 0px;
+                color: var(--nightGray);
+                @media (max-width: 767px) {
+                    white-space: nowrap;
+                }
+                .MuiRadio-root {
+                    margin-right: 12px;
+                }
+                &:first-child {
+                    width: 220px;
+                    min-width: 220px;
+                    @media (max-width: 767px) {
+                        min-width: 180px;
+                    }
+                }
+                &:last-child {
+                    margin-left: auto;
+                    @media (max-width: 767px) {
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .outline-btn {
+        background-color: transparent;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+        margin-bottom: 24px;
+    }
+    .height48 {
+        height: 48px;
+        margin: 30px 0px;
+    }
+    a.removeText {
+        color: var(--Primary);
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .map-img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .check50width {
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 5px;
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-right: 0px;
+            .MuiButtonBase-root {
+                margin-right: -3px;
+            }
+        }
+        &:nth-child(odd) {
+            width: 40%;
+            @media (max-width: 767px) {
+                width: 100%;
+                margin-right: 0px;
+            }
+        }
+    }
+}

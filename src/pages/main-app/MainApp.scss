@@ -1,0 +1,15 @@
+.main-app-grid {
+  .main-mid-container{
+    padding: 110px 24px 0px 216px;
+    background: #FAFAFA;
+    @media(min-width: 1660px){
+      padding: 130px 30px 0px 270px;
+    }
+    @media(max-width: 991px){
+      padding: 110px 24px 0px 24px;
+    }
+    @media(max-width: 767px){
+      padding: 110px 15px 0px 15px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.cgig-overview-main-holder {
+    .overview-box {
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        border-radius: 0.25rem;
+        border: 1px solid var(--gray97);
+        padding: 20px 20px;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        box-sizing: border-box;
+    }
+    .image-upload-holder {
+        background-color: var(--lightGreen);
+        border-radius: 4px;
+        margin-bottom: 0px;
+        .img-upload-box {
+            position: relative;
+            padding: 16px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            input[type="file"] {
+                position: absolute;
+                top: -9999999;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                width: 0;
+                height: 0;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+        .uploaded-img {
+            height: 120px;
+            width: 100%;
+        }
+    }
+    .MuiButtonBase-root {
+        @media(max-width: 767px) {
+            margin-right: 4px !important;
+        }
+    }
+}
+
+.tox-tinymce {
+    border: none !important;
+    border-radius: 4px !important;
+    .tox-editor-container {
+        .tox-editor-header {
+            background-color: var(--lightGreen) !important;
+            box-shadow: none !important;
+            padding: 0px 0px !important;
+            transition: box-shadow .5s;
+            border-bottom: 1px solid var(--gray97) !important;
+            .tox-toolbar-overlord {
+                background-color: var(--lightGreen) !important;
+            }
+            .tox-toolbar__primary {
+                background-color: var(--lightGreen) !important;
+            }
+        }
+        .tox-edit-area__iframe {
+            background-color: var(--lightGreen) !important;
+        }
+    }
+}
+
+.tox-notification,
+.tox-statusbar {
+    display: none !important;
+}
+
+.MuiFormControlLabel-root {
+    margin-left: -2px !important;
+    .MuiButtonBase-root {
+        margin-right: 6px;
+    }
+    .MuiTypography-body1 {
+        font-size: 14px !important;
+        font-weight: 500;
+    }
+}
+
+.weapons-icon {
+    width: 17px;
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    position: relative;
+    left: -8px;
+}

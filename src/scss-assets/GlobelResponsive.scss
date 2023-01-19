@@ -1,0 +1,117 @@
+.grayBox {
+    min-height: calc(100vh - 286px);
+    @media (min-width: 1660px) {
+        min-height: calc(100vh - 520px);
+    }
+}
+
+.heading1bold {
+    @media(min-width: 1660px) {
+        font-size: 48px !important;
+    }
+    @media(max-width: 767px) {
+        font-size: 32px !important;
+    }
+}
+
+.heading2bold {
+    @media(min-width: 1660px) {
+        font-size: 40px !important;
+    }
+    @media(max-width: 767px) {
+        font-size: 28px !important;
+    }
+}
+
+.heading3bold {
+    @media(min-width: 1660px) {
+        font-size: 30px !important;
+    }
+    @media(max-width: 767px) {
+        font-size: 22px !important;
+    }
+}
+
+.heading4medium {
+    @media(min-width: 1660px) {
+        font-size: 24px !important;
+    }
+    @media(max-width: 767px) {
+        font-size: 16px !important;
+    }
+}
+
+.heading5medium {
+    @media(min-width: 1660px) {
+        font-size: 22px !important;
+    }
+    @media(max-width: 767px) {
+        font-size: 18px !important;
+    }
+}
+
+.heading6medium {
+    @media(min-width: 1660px) {
+        font-size: 20px !important;
+    }
+    @media(max-width: 767px) {
+        font-size: 14px !important;
+    }
+}
+
+.primarybutton,
+.neutrallightbutton,
+.transparentbutton {
+    @media (min-width: 1660px) {
+        height: 54px !important;
+        font-size: 16px !important;
+    }
+}
+
+.inputlabel {
+    @media (min-width: 1660px) {
+        font-size: 18px !important;
+    }
+}
+
+.body {
+    @media (min-width: 1660px) {
+        font-size: 18px !important;
+    }
+}
+
+.textfield {
+    @media (min-width: 1660px) {
+        height: 50px;
+        font-size: 16px !important;
+    }
+}
+
+.inputerror,
+.small {
+    @media (min-width: 1660px) {
+        font-size: 14px !important;
+    }
+}
+
+.unvisibleicon,
+.visibleicon {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    @media (min-width: 1660px) {
+        top: 13px !important;
+    }
+}
+
+.visibleicon,
+.unvisibleicon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    @media (min-width: 1660px) {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}

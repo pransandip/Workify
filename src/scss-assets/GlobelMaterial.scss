@@ -1,0 +1,234 @@
+.grid-header {
+  width: 100%;
+}
+.grid-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--gray97);
+  box-shadow: none;
+  padding: 32px 32px;
+  margin: 32px auto;
+  border-radius: 4px;
+  max-width: 565px;
+  box-sizing: border-box;
+  @media (max-width: 767px) {
+    padding: 16px 20px;
+  }
+  .grid-item {
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+  }
+}
+
+.input-success {
+  border-color: var(--success) !important;
+}
+
+.input-error {
+  border-color: var(--error) !important;
+}
+
+.inputerror {
+  position: absolute;
+}
+.textfield {
+  height: 40px;
+}
+
+.Mui-checked {
+  color: var(--Primary) !important;
+}
+.label-new {
+  position: relative;
+  font-size: 14px;
+  color: var(--graye5);
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.MuiFormControl-root {
+  width: 100%;
+  height: 40px;
+  .MuiOutlinedInput-root {
+    height: 40px;
+    background: var(--lightGreen);
+    font-size: 14px;
+    .MuiSelect-select {
+      padding: 10px 14px;
+    }
+    .MuiAutocomplete-input {
+      padding: 0px 0px 0px 10px !important;
+      cursor: pointer;
+    }
+    .MuiOutlinedInput-notchedOutline {
+      display: none;
+    }
+  }
+}
+.MuiInputAdornment-root {
+  .MuiButtonBase-root {
+    padding: 6px;
+  }
+}
+.MuiPickersDay-root {
+  margin: 0px 0px !important;
+}
+.hs-containpadding {
+  .MuiAccordion-gutters.Mui-expanded {
+    margin-top: 0px !important;
+  }
+}
+// .Mui-selected{
+//   background-color: var(--blue) !important;
+// }
+.textarea {
+  height: auto;
+  .MuiOutlinedInput-root {
+    height: auto;
+    .MuiInputBase-inputMultiline {
+      -webkit-overflow-scrolling: touch;
+      scrollbar-color: #bcdfe7 transparent;
+      scrollbar-width: thin;
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: transparent;
+        border-radius: 2px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #bcdfe7;
+        border-radius: 2px;
+      }
+      &::-webkit-scrollbar-track {
+        border: 0.0625rem solid transparent;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+.modalwidth548 {
+  .MuiDialog-paperWidthSm {
+    width: 448px;
+    @media (min-width: 1660px) {
+      width: 548px;
+    }
+    @media (max-width: 576px) {
+      margin: 20px 10px;
+    }
+  }
+}
+.modalwidth610 {
+  .MuiDialog-paperWidthSm {
+    width: 510px;
+    @media (min-width: 1660px) {
+      width: 610px;
+    }
+    @media (max-width: 576px) {
+      margin: 20px 10px;
+    }
+    .MuiDialogContentText-root {
+      padding: 0px 0px;
+    }
+  }
+}
+.MuiDialogTitle-root {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  padding-bottom: 8px !important;
+  color: var(--nightGray);
+  position: relative;
+  .modal-crose {
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    cursor: pointer;
+    width: 15px;
+    background: none;
+  }
+}
+.MuiDialogContentText-root {
+  color: var(--darkGray) !important;
+  margin-bottom: 10px !important;
+}
+.MuiDialogContent-root {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: #bcdfe7 transparent;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #bcdfe7;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    border: 0.0625rem solid transparent;
+    border-radius: 2px;
+  }
+}
+.MuiDialogActions-spacing {
+  padding: 5px 24px 20px 24px !important;
+}
+
+.location-address {
+  position: relative;
+  .locationGrayIcon {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    @media (min-width: 1660px) {
+      top: 12px;
+    }
+  }
+  input {
+    padding-left: 40px;
+  }
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.MuiPickersToolbar-toolbar {
+  background-color: var(--blue) !important;
+}
+.MuiPickersDay-daySelected {
+  background-color: var(--blue) !important;
+}
+.MuiButton-textPrimary,
+.rmdp-week-day {
+  color: var(--blue) !important;
+}
+.MuiPickersClockPointer-pointer,
+.MuiPickersClock-pin,
+.rmdp-range {
+  background-color: var(--blue) !important;
+}
+.MuiPickersClockPointer-thumb {
+  border-color: var(--blue) !important;
+}
+.rmdp-arrow {
+  border-color: solid var(--blue) !important;
+}
+.rmdp-arrow-container:hover {
+  background-color: var(--blue) !important;
+  .rmdp-arrow {
+    border-color: solid var(--white) !important;
+  }
+}
+.rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+  background-color: var(--blue) !important;
+}
+.rmdp-day.rmdp-today span {
+  background-color: var(--highlightBlue) !important;
+}

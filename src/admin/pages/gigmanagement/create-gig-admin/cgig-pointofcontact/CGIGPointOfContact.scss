@@ -1,0 +1,25 @@
+.cgig-overview-main-holder.pointOfContact {
+    .overview-box {
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        border-radius: 0.25rem;
+        border: 1px solid var(--gray97);
+        padding: 20px 20px;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        box-sizing: border-box;
+        .grid-item {
+            margin-bottom: 20px;
+        }
+    }
+    .cgig-omh-radio {
+        .MuiFormControl-root {
+            width: 100%;
+            height: auto;
+            .PrivateSwitchBase-root-1 {
+                padding: 5px;
+            }
+        }
+    }
+}

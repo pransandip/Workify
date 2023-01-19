@@ -1,0 +1,41 @@
+.Login-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: var(--white);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 100%;
+  box-sizing: border-box;
+  @media (min-width:1660px){
+    height: 140px;
+  }
+  @media (max-width: 991px){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .login-logo{
+    height: 54px;
+    @media (min-width:1660px){
+      height: 83px;
+    }
+  }
+  .buttons-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &  > *{
+      cursor: pointer;
+      @media (min-width:1660px){
+        font-size: 16px;
+      }
+    }
+    .tertiarybutton{
+      height: 44px;border-radius: 0px 0px 0px 0px;
+    }
+  }
+}

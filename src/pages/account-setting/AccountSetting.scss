@@ -1,0 +1,208 @@
+.AccountSetting-holder{
+
+}
+
+.accountBox{
+  width:100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0.25rem;
+  border: 1px solid var(--gray97);
+  padding: 20px 24px;
+  margin-top: 24px;
+  margin-bottom: 40px;
+  @media (min-width:1660px){
+    max-width: 1000px;
+  }
+  @media (max-width:1149px){
+    max-width: 750px;
+    box-sizing: border-box;
+  }
+  .account-flex-row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    @media (max-width:991px){
+      flex-direction: column;
+    }
+    .left-heading{
+      width:270px;
+      min-width: 270px;
+      @media (min-width:1660px){
+        width: 325px;
+        min-width: 325px;
+      }
+      @media (max-width:1149px){
+        width: 170px;
+        min-width: 170px
+      }
+      @media (max-width:991px){
+        width: 100%;
+        min-width: 100%;
+        margin-bottom: 10px
+      }
+    }
+    .value-text{
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--nightGray);
+      margin: 0px;
+      @media (min-width:1660px){
+        font-size: 18px;
+      }
+      @media (max-width:991px){
+        width: 100%;
+      }
+    }
+    .upload-box{
+      width: 150px;
+      height: 150px;
+      border-radius: 0.25rem;
+      border:1px solid var(--gray97);
+      background-color: var(--lightGreen);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      position: relative;
+      @media (min-width:1660px){
+        width: 182px;
+        height: 182px;
+      }
+      .upload-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.25rem;
+      }
+      .upload-icon{
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 0.25rem;
+      }
+      .crose-icon{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+    }
+    .upload-btn{
+      position: relative;
+      margin-left: auto;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--blue);
+      @media (min-width:1660px){
+        font-size: 18px;
+      }
+      input[type=file], /* FF, IE7+, chrome (except button) */
+      input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 24px;
+        width: 100%;
+        cursor: pointer;
+        opacity: 0;
+      }
+    }
+    .editTextBox{
+      margin: 0px 0px 0px auto;
+      @media(max-width:991px){
+        position: absolute;
+        top: -3px;
+        right: 0px;
+      }
+    }
+    .MuiFormControlLabel-root{
+      margin-left: auto;
+      input{
+        opacity: 0;
+      }
+      span{
+        margin-left: auto;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--blue);
+        @media (min-width:1660px){
+          font-size: 18px !important;
+        }
+      }
+      input[type="checkbox"]:checked~span{
+        opacity: 0;
+      }
+    }
+
+    .locationGrayIcon{
+      width: 24px;
+      height: 24px;
+
+    }
+  }
+}
+.width480{
+  max-width: 480px;
+  min-width: 480px;
+}
+.width340{
+  max-width: 340px;
+  min-width: 340px;
+}
+
+.width340,.width480{
+  position: relative;
+  margin-top: 0px;
+  @media (max-width:767px){
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .grid-item{
+    margin-bottom: 0px;
+  }
+}
+.MuiCollapse-entered~.change-value-text{
+  display: none;
+}
+
+.pass_set{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-family: 400;
+  color: var(--nightGray);
+  margin-bottom: 0.5rem;
+  & > img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 8px;
+  }
+  &.desable{
+    & > img{
+      filter: grayscale(1);
+    }
+  }
+  &.wrong_pass{
+    & > img{
+      filter: hue-rotate(270deg) contrast(5);
+    }
+  }
+}
+
+.alert-type-green{
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--success);
+  display: block;
+  margin-top: 10px;
+}

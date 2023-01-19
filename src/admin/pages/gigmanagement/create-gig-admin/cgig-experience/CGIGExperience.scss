@@ -1,0 +1,62 @@
+.cgig-overview-main-holder {
+    .overview-box {
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        border-radius: 0.25rem;
+        border: 1px solid var(--gray97);
+        padding: 20px 20px;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        box-sizing: border-box;
+        .tertiarybutton {
+            height: 40px;
+        }
+    }
+    .image-upload-holder {
+        background-color: var(--lightGreen);
+        border-radius: 4px;
+        margin-bottom: 16px;
+        .img-upload-box {
+            position: relative;
+            padding: 16px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            input[type="file"] {
+                position: absolute;
+                top: -9999999;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                width: 0;
+                height: 0;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+        .uploaded-img {
+            height: 120px;
+            width: 100%;
+        }
+    }
+    .MuiIconButton-root{
+      padding: 2px !important;
+    }
+    .blue-alerttype-box {
+        background-color: var(--Primary);
+        border-radius: 4px;
+        height: 40px;
+        padding: 0px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .alertcloseicon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+    }
+}

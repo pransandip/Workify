@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background: rgba(0, 0, 0, 0.4);
+
+  .container-modal {
+    z-index: 10;
+    width: 416px;
+    background: #fafafa;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    border-radius: 16px;
+    position: relative;
+    animation: animate 0.3s;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    padding: 32px 32px 40px 32px;
+
+    .popup-wbimgpop-container {
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      margin: -88px auto auto auto;
+      &.neutral {
+        background-color: var(--whiteGray);
+      }
+      &.positive {
+        background-color: var(--sharpGreen);
+      }
+      &.negative {
+        background-color: var(--lightRed);
+      }
+    }
+    .profile-upload-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+  }
+  .modal {
+    .large {
+      width: 620px;
+    }
+  }
+  .popup-team-upgrade-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--whiteGray);
+    border-radius: 8px;
+  }
+}

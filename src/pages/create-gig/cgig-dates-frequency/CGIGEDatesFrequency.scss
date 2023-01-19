@@ -1,0 +1,144 @@
+.cgig-overview-main-holder {
+    .frequency-flex-box {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        @media (max-width: 1049px) {
+            display: block;
+        }
+        .overview-box {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            border-radius: 0.25rem;
+            border: 1px solid var(--gray97);
+            padding: 20px 20px;
+            margin-top: 0px;
+            margin-bottom: 40px;
+            box-sizing: border-box;
+            @media (max-width: 1049px) {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            @media(max-width: 767px) {
+                padding: 20px 10px 20px 20px;
+            }
+            &.width650 {
+                min-width: 650px;
+                margin-right: 20px;
+                @media (max-width: 1199px) {
+                    min-width: 510px;
+                }
+                @media (max-width: 767px) {
+                    min-width: 100%;
+                }
+            }
+            &.width350 {
+                width: 350px;
+                @media (max-width: 1049px) {
+                    width: 495px;
+                }
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+                .frequency-flex-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 0px;
+                    .leftValue {
+                        font-weight: 500;
+                    }
+                    .rightValue {
+                        .blueSpan {
+                            background: var(--lightGreen);
+                            min-height: 28px;
+                            min-width: 80px;
+                            padding: 5px 10px;
+                            box-sizing: border-box;
+                            display: block;
+                            border-radius: 0.25rem;
+                        }
+                        .borderSpan {
+                            min-height: 28px;
+                            min-width: 80px;
+                            padding: 5px 10px;
+                            box-sizing: border-box;
+                            display: block;
+                            border-radius: 0rem;
+                            border-bottom: 1px solid var(--nightGray);
+                        }
+                        .normalSpan {
+                            min-height: 28px;
+                            min-width: 80px;
+                            padding: 5px 10px;
+                            box-sizing: border-box;
+                            display: block;
+                            border-radius: 0rem;
+                        }
+                    }
+                }
+            }
+            .radioSingleBox {
+                margin-bottom: 20px;
+                @media (max-width: 360px) {
+                    margin-bottom: 50px;
+                }
+            }
+            .divider {
+                height: 1px;
+                width: 100%;
+                background-color: var(--gray97);
+                display: block;
+                margin: 30px 0px;
+            }
+            .tool-box {
+                height: 18px;
+                position: relative;
+                top: 6px;
+                left: -8px;
+                .info-icon {
+                    width: 16px;
+                    height: 16px;
+                    object-fit: contain;
+                }
+                .tool-hover {
+                    position: absolute;
+                    bottom: auto;
+                    top: -32px;
+                    left: -15px;
+                    background-color: var(--white);
+                    box-shadow: -1px 1px 5px 1px var(--whiteGray);
+                    border-radius: 0.25rem;
+                    color: var(--nightGray);
+                    white-space: nowrap;
+                    height: auto;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    transform: translateY(10px);
+                    transition: all 100ms;
+                    visibility: hidden;
+                    opacity: 0;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 18px;
+                        bottom: -5px;
+                        height: 10px;
+                        width: 10px;
+                        background: var(--white);
+                        transform: rotate(45deg);
+                    }
+                }
+                &:hover {
+                    .tool-hover {
+                        transform: translateY(0px);
+                        transition: all 100ms;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

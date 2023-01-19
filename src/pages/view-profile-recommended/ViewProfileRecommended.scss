@@ -1,0 +1,189 @@
+.profile-holder {
+    background-color: #E9EDF1;
+    position: relative;
+    left: -26px;
+    margin-top: -40px;
+    width: calc(100% + 50px);
+    min-height: calc(100vh - 70px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media(min-width: 1800px) {
+        min-height: calc(100vh - 96px);
+    }
+    @media (max-width: 1199px) {
+        display: block;
+    }
+    .profile-left-section {
+        min-height: calc(100vh - 70px);
+        width: 310px;
+        border-radius: 0px 0px 40px 0px;
+        background-color: var(--white);
+        box-sizing: border-box;
+        padding: 20px 20px 20px 20px;
+        @media(min-width: 1800px) {
+            min-height: calc(100vh - 96px);
+            padding: 30px 30px 30px 30px;
+            width: 430px;
+        }
+        @media (max-width: 1199px) {
+            min-height: auto;
+            width: 100%;
+            padding: 10px 20px 20px 20px;
+            border-radius: 0px 0px 20px 20px;
+            text-align: center;
+        }
+        .tap-back {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            svg {
+                fill: var(--blue);
+                margin-right: 4px;
+                cursor: pointer;
+                @media(min-width: 1800px) {
+                    margin-right: 7px;
+                }
+            }
+        }
+        .profileRoundBox {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            margin: auto;
+            border-radius: 50%;
+            border: 1px solid #CFCFCF;
+            @media(min-width: 1800px) {
+                width: 158px;
+                height: 158px;
+            }
+            .roundImg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .weaponIcon {
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+            }
+        }
+        .heading2bold {
+            margin: 30px 0px 40px 0px;
+            text-align: center;
+            @media(min-width: 1800px) {
+                margin: 40px 0px 60px 0px;
+            }
+            @media (max-width: 1199px) {
+                margin: 14px 0px 20px 0px;
+            }
+        }
+        .heading4medium {
+            margin: 30px 0px 20px 0px;
+            text-align: center;
+            @media(min-width: 1800px) {
+                margin: 40px 0px 30px 0px;
+            }
+            @media (max-width: 1199px) {
+                margin: 15px 0px 10px 0px;
+            }
+        }
+        .primarybutton {
+            @media (max-width: 1199px) {
+                width: 200px;
+            }
+        }
+    }
+    .profile-center-section {
+        width: calc(100% - 650px);
+        box-sizing: border-box;
+        padding: 20px 30px;
+        @media(min-width: 1800px) {
+            padding: 30px 45px;
+            width: calc(100% - 460px - 430px);
+        }
+        @media (max-width: 1199px) {
+            width: calc(100% - 0px);
+        }
+        .card-box {
+            margin-top: 20px;
+            background-color: var(--white);
+            padding: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            @media(min-width: 1800px) {
+                padding: 20px;
+            }
+            @media (max-width:576px) {
+                display: block;
+            }
+            .react-img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                @media(min-width: 1800px) {
+                    width: 116px;
+                    height: 116px;
+                }
+            }
+            .card-body {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding-top: 4px;
+                padding-left: 18px;
+                width: 100%;
+                box-sizing: border-box;
+                @media (max-width: 576px) {
+                    padding-left: 0px;
+                }
+                .heading6medium {
+                    margin: 4px 0px;
+                }
+            }
+        }
+    }
+    .profile-right-section {
+        min-height: calc(100vh - 70px);
+        padding: 30px 20px;
+        width: 340px;
+        border-radius: 0px 0px 0px 40px;
+        background-color: var(--white);
+        box-sizing: border-box;
+        @media(min-width: 1800px) {
+            width: 460px;
+            padding: 40px 30px;
+        }
+        @media (max-width: 1199px) {
+            min-height: auto;
+            width: 100%;
+            border-radius: 20px 20px 0px 0px;
+        }
+        .blueChips {
+            height: 36px;
+            width: 100%;
+            background-color: var(--Primary);
+            color: var(--white);
+            padding: 11px 9px;
+            border-radius: 0.25rem;
+            box-sizing: border-box;
+            margin-top: 10px;
+            @media(min-width: 1800px) {
+                height: 40px;
+                padding: 12px 12px;
+            }
+            .small {
+                margin-right: 4px;
+            }
+        }
+        .divider-line {
+            border-color: var(--gray97);
+            margin: 24px 0px;
+        }
+    }
+}
