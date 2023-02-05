@@ -425,7 +425,7 @@ function GigDetailSingledayGigInfo(props) {
             )}
           </div>
         </DialogContent>
-        <DialogActions style={{ marginTop: "-8px"}}>
+        <DialogActions style={{ marginTop: "-8px" }}>
           <TransparentButton
             className="transparentbutton"
             onClick={handleClose}
@@ -508,7 +508,7 @@ function GigDetailSingledayGigInfo(props) {
               className={"body"}
               textAlign={"center"}
               color={Colors.midGray}
-              text={"<Confirm steps have been taken>"}
+              text={"Confirm steps have been taken"}
             />
           </DialogContentText>
         </DialogContent>

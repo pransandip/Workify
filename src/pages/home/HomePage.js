@@ -31,7 +31,7 @@ const strings = require("../../localisation_en.json");
 
 function HomePage(props) {
   let user = useSelector((state) => state.userData.data);
-  console.log('user', user)
+  console.log("user", user);
   chatInitilization();
   if (!user) {
     user =
@@ -52,7 +52,7 @@ function HomePage(props) {
     }
     loginUser(user_id);
   });
-console.log('user.company_logo',user.company_logo)
+  console.log("user.company_logo", user.company_logo);
   return (
     <div className="main-app-grid">
       <Sidebar />
@@ -69,8 +69,12 @@ console.log('user.company_logo',user.company_logo)
               marginBottom={"24px"}
             >
               <img
-                src={user?.company_logo !== null ?  `${imageBase}${user.company_logo}` : ConpanyLogoJJ}
-                // alt=""
+                src={
+                  user?.company_logo !== null
+                    ? `${imageBase}${user.company_logo}`
+                    : ConpanyLogoJJ
+                }
+                alt="imageBase"
                 className={"company-logo"}
               />
               <Heading2Bold

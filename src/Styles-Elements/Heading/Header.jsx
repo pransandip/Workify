@@ -89,6 +89,8 @@ function Header(props) {
     loadData();
   }, []);
 
+  console.log(`${user.business_name.replace(/\b[a-z]/g, (x) => x.toUpperCase())}`)
+
   return (
     <div className="main-header">
       {/*<img height={24} src={notificationIcon} alt="name"  />*/}
@@ -109,7 +111,7 @@ function Header(props) {
           <span className={"profile-name"}>
             {user && user.business_name.length >= 25
               ? user.business_name.substring(0, 50) + "..."
-              : user.business_name}
+              : `${user.business_name.replace(/\b[a-z]/g, (x) => x.toUpperCase())}`}
           </span>
           <img src={collapseIcon} width={"16px"} className="" alt="name" />
         </Button>

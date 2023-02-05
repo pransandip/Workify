@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import {
   NeutralLightButton,
+  PrimaryButton,
   SecondaryButton,
 } from "../../Styles-Elements/Buttons";
 import { Textfield, InputWrapper } from "../../Styles-Elements/Inputs";
@@ -293,7 +294,7 @@ function Signin() {
           {signmailError === false &&
           signpasswordError === false &&
           !loading ? (
-            <SecondaryButton
+            <PrimaryButton
               to="/home"
               className="primarybutton"
               text={strings.signIn}

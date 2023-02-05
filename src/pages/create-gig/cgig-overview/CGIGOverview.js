@@ -30,7 +30,7 @@ const strings = require("../../../localisation_en.json");
 function CGIGOverview(props) {
   const dispatch = useDispatch();
   let gig_data = useSelector((state) => state.gigData);
-  console.log(`gig_data--overview-->`, gig_data)
+  console.log(`gig_data--overview-->`, gig_data);
   const user = useSelector((state) => state.userData.data);
   const localUser = localStorage.getItem("user");
   // states define
@@ -78,7 +78,7 @@ function CGIGOverview(props) {
   const editorRef = useRef(null);
 
   const handleImgUpload = (e) => {
-    console.log(`e.target.files[0]`, e.target.files[0])
+    console.log(`e.target.files[0]`, e.target.files[0]);
     setNewLogoGig(e.target.files[0]);
     setLogoError(false);
     let reader = new window.FileReader();
@@ -184,7 +184,7 @@ function CGIGOverview(props) {
           <Grid container rowSpacing={2} columnSpacing={2}>
             <Grid item xs={12}>
               <InputLabel
-                text={strings.coverImage}
+                text={`* ${strings.coverImage}`}
                 color={Colors.nightGray}
                 padding={"0px 0 8px 0"}
                 className={"inputlabel"}
@@ -196,8 +196,8 @@ function CGIGOverview(props) {
                       previewModal.imageData
                         ? previewModal.imageData
                         : newLogoGig
-                          ? `${imageBase}${newLogoGig}`
-                          : imageUploadIcon
+                        ? `${imageBase}${newLogoGig}`
+                        : imageUploadIcon
                     }
                     alt="name"
                     className=""
@@ -242,7 +242,7 @@ function CGIGOverview(props) {
             <Grid item xs={8}>
               <div className="grid-item">
                 <InputLabel
-                  text={strings.positionTitle}
+                  text={`* ${strings.positionTitle}`}
                   color={Colors.nightGray}
                   padding={"0px 0 8px 0"}
                   className={"inputlabel"}
@@ -274,7 +274,7 @@ function CGIGOverview(props) {
             <Grid item xs={4}>
               <div className="grid-item">
                 <InputLabel
-                  text={strings.vacancies}
+                  text={`* ${strings.vacancies}`}
                   color={Colors.nightGray}
                   padding={"0px 0 8px 0"}
                   className={"inputlabel"}
@@ -313,7 +313,7 @@ function CGIGOverview(props) {
             <Grid item xs={12}>
               <div className="grid-item">
                 <InputLabel
-                  text={strings.jobDescription}
+                  text={`* ${strings.jobDescription}`}
                   color={Colors.nightGray}
                   padding={"0px 0 8px 0"}
                 />

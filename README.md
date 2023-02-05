@@ -64,4 +64,3 @@ This component can only be found on the login screen and during onboarding.
 ### Onboarding dropdown on the import step (need to align it with the dropdown field itself)
 ### Adding a link on the checkout page when the 🎉 box comes up (it will have to be the same calendly link as on the previous step)
 ### Adding a template CSV file to the onboarding step download section
-# Workify

@@ -45,12 +45,11 @@ function a11yProps(index) {
 }
 
 function GigActiveList(props) {
-
   const [value, setValue] = React.useState(0);
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState("");
 
   const handleChange = (event, newValue) => {
-    setSearchValue('')
+    setSearchValue("");
     setValue(newValue);
   };
 
@@ -97,26 +96,33 @@ function GigActiveList(props) {
             </Tabs>
             <div
               className="grid-item filtercol filtercol-search"
-            //style={{ position: "absolute", right: "0px", top: "0px" }}
+              //style={{ position: "absolute", right: "0px", top: "0px" }}
             >
               <Textfield
                 className="textfield"
                 placeholder={"Search..."}
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
+                style={{ padding: "10px 16px 10px 36px" }}
               />
               <img src={searchIcon} alt="name" className={"filtersearchicon"} />
             </div>
           </Box>
           <TabPanel className={"tabpanels"} value={value} index={0}>
-            <GigActiveSingleDay search={searchValue} suggestions={suggestions} />
+            <GigActiveSingleDay
+              search={searchValue}
+              suggestions={suggestions}
+            />
           </TabPanel>
           <TabPanel className={"tabpanels"} value={value} index={1}>
-            <GigActiveMultipleDay search={searchValue} suggestions={suggestions} />
+            <GigActiveMultipleDay
+              search={searchValue}
+              suggestions={suggestions}
+            />
           </TabPanel>
         </Box>
       </div>
-    </div >
+    </div>
   );
 }
 

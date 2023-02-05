@@ -261,15 +261,15 @@ function Staff(props) {
               if (res.data.ack === 1) {
                 //setConfirmationOpensuccessOpen(true);
                 //setOpen(false);
-                console.log(res.data)
+                console.log(res.data);
                 getAllStuff();
               } else {
                 let message = "";
                 Array.isArray(res.data.msg)
                   ? res.data.msg.length > 0 &&
-                  res.data.msg.forEach((item) => {
-                    message = message + " " + Object.values(item)[0];
-                  })
+                    res.data.msg.forEach((item) => {
+                      message = message + " " + Object.values(item)[0];
+                    })
                   : (message = res.data.msg);
                 setConfirmationOpen(true);
                 setConfirmationType({
@@ -394,7 +394,7 @@ function Staff(props) {
     // }
   };
 
-  // console.log(staffData)
+  console.log(name.trim().length === 0);
 
   return (
     <div className="main-app-grid">
@@ -541,8 +541,13 @@ function Staff(props) {
                   placeholder={""}
                   value={name}
                   onChange={(e) => {
-                    setName(e.target.value);
-                    setNameError(false);
+                    if (e.target.value.trim().length === 0) {
+                      setName("");
+                      return;
+                    } else {
+                      setName(e.target.value);
+                      setNameError(false);
+                    }
                   }}
                 />
                 {/* {console.log(nameError, emailError)} */}
@@ -568,8 +573,13 @@ function Staff(props) {
                   placeholder={""}
                   value={email}
                   onChange={(e) => {
-                    setEmail(e.target.value);
-                    setEmailError(false);
+                    if (e.target.value.trim().length === 0) {
+                      setEmail("");
+                      return;
+                    } else {
+                      setEmail(e.target.value);
+                      setEmailError(false);
+                    }
                   }}
                 />
                 {emailError && (
@@ -698,7 +708,7 @@ function Staff(props) {
                 className="primarybutton"
                 onClick={() => {
                   // setPhoneNumberError2(false);
-                  successStaffClickopen(flag)
+                  successStaffClickopen(flag);
                 }}
                 autoFocus
                 text={flag ? strings.confirm : strings.SendInvite}
