@@ -159,14 +159,20 @@ function GigActiveSingleDay(props) {
   };
 
   /*------Code Added for search -----*/
-  const filteredGigs = singleDayActiveGig.filter(gig =>
+  const filteredGigs = singleDayActiveGig.filter((gig) =>
     gig.position.toLowerCase().includes(props.search.toLowerCase())
-  )
+  );
+
+  console.log({ filteredGigs });
 
   /*------Code Added marge same date gigs -----*/
-  const dates = singleDayActiveGig.map(item => new Date(item.startdate).toDateString())
-  const toFindDuplicates = dates.filter((item, index) => dates.indexOf(item) !== index)
-  const setArr = [...new Set(toFindDuplicates)]
+  const dates = singleDayActiveGig.map((item) =>
+    new Date(item.startdate).toDateString()
+  );
+  const toFindDuplicates = dates.filter(
+    (item, index) => dates.indexOf(item) !== index
+  );
+  const setArr = [...new Set(toFindDuplicates)];
 
   return (
     <div className="main-app-grid">
@@ -179,26 +185,42 @@ function GigActiveSingleDay(props) {
         </div>
       ) : (
         <div className="gig-single-holder" style={{ minHeight: "300px" }}>
-
-          {filteredGigs.length > 0 ?
+          {filteredGigs.length > 0 ? (
             filteredGigs.map((items) => {
               return (
                 items.status === "active" && (
-                  <div className={`gig_classA ${setArr.includes(new Date(items.startdate).toDateString()) ? 'gig_classB' : "no_effect_class"}`}>
-                    {setArr.includes(new Date(items.startdate).toDateString()) ? (<Heading6Medium
-                      className={`heading6medium ${setArr.includes(new Date(items.startdate).toDateString()) ? `date_class` : ""}`}
-                      text={`${new Date(items.startdate).toDateString()}`}
-                      fontWeight={"700"}
-                      color={Colors.nightGray}
-                      padding={"0 0 16px 0"}
-                    />)
-                      : <Heading6Medium
+                  <div
+                    className={`gig_classA ${
+                      setArr.includes(new Date(items.startdate).toDateString())
+                        ? "gig_classB"
+                        : "no_effect_class"
+                    }`}
+                  >
+                    {setArr.includes(
+                      new Date(items.startdate).toDateString()
+                    ) ? (
+                      <Heading6Medium
+                        className={`heading6medium ${
+                          setArr.includes(
+                            new Date(items.startdate).toDateString()
+                          )
+                            ? `date_class`
+                            : ""
+                        }`}
+                        text={`${new Date(items.startdate).toDateString()}`}
+                        fontWeight={"700"}
+                        color={Colors.nightGray}
+                        padding={"0 0 16px 0"}
+                      />
+                    ) : (
+                      <Heading6Medium
                         className={"heading6medium"}
                         text={`${new Date(items.startdate).toDateString()}`}
                         fontWeight={"700"}
                         color={Colors.nightGray}
                         padding={"0 0 16px 0"}
-                      />}
+                      />
+                    )}
                     <div className={"topHeader"}>
                       <div>
                         <img
@@ -224,9 +246,17 @@ function GigActiveSingleDay(props) {
                         <p className={"status-p"}>
                           <span
                             className={"status"}
-                            style={{ background: "var(--error)" }}
+                            style={{
+                              background: `${
+                                items.confirm_count == items.vacancies
+                                  ? `var(--success)`
+                                  : items.confirm_count === 0
+                                  ? `var(--error)`
+                                  : `var(--warning)`
+                              }`,
+                            }}
                           ></span>{" "}
-                          {`0/${items.vacancies}`}
+                          {`${items.confirm_count}/${items.vacancies}`}
                         </p>
                         <Heading3Bold
                           text={
@@ -262,25 +292,26 @@ function GigActiveSingleDay(props) {
                               fontWeight={700}
                               className={"heading6medium"}
                               color={Colors.nightGray}
-                              text={`${new Date(items.starttime).toString() ===
+                              text={`${
+                                new Date(items.starttime).toString() ===
                                 "Invalid Date"
-                                ? `${items.starttime + ` - ` + items.endtime}`
-                                : new Date(
-                                  `${items.starttime}`
-                                ).toLocaleTimeString("en-US", {
-                                  hour: "numeric",
-                                  minute: "numeric",
-                                  hour12: true,
-                                }) +
-                                ` - ` +
-                                new Date(
-                                  `${items.endtime}`
-                                ).toLocaleTimeString("en-US", {
-                                  hour: "numeric",
-                                  minute: "numeric",
-                                  hour12: true,
-                                })
-                                }`}
+                                  ? `${items.starttime + ` - ` + items.endtime}`
+                                  : new Date(
+                                      `${items.starttime}`
+                                    ).toLocaleTimeString("en-US", {
+                                      hour: "numeric",
+                                      minute: "numeric",
+                                      hour12: true,
+                                    }) +
+                                    ` - ` +
+                                    new Date(
+                                      `${items.endtime}`
+                                    ).toLocaleTimeString("en-US", {
+                                      hour: "numeric",
+                                      minute: "numeric",
+                                      hour12: true,
+                                    })
+                              }`}
                             />
                           </Box>
                           <Box className={"infoBox"}>
@@ -313,33 +344,33 @@ function GigActiveSingleDay(props) {
                           </Box>
                           {(items.status === "completed" ||
                             items.status === "cancel") && (
-                              <Box className={"infoBox"}>
-                                <Small
-                                  color={Colors.lightGray}
-                                  className={"small"}
-                                  text={"Status"}
-                                />
-                                <Heading5Medium
-                                  fontWeight={700}
-                                  className={"heading6medium"}
-                                  color={
-                                    items.status === "completed"
-                                      ? Colors.success
-                                      : Colors.error
-                                  }
-                                  text={
-                                    items.status === "completed"
-                                      ? "Completed"
-                                      : "Cancelled"
-                                  }
-                                />
-                              </Box>
-                            )}
+                            <Box className={"infoBox"}>
+                              <Small
+                                color={Colors.lightGray}
+                                className={"small"}
+                                text={"Status"}
+                              />
+                              <Heading5Medium
+                                fontWeight={700}
+                                className={"heading6medium"}
+                                color={
+                                  items.status === "completed"
+                                    ? Colors.success
+                                    : Colors.error
+                                }
+                                text={
+                                  items.status === "completed"
+                                    ? "Completed"
+                                    : "Cancelled"
+                                }
+                              />
+                            </Box>
+                          )}
                         </div>
                       </div>
                       <Box className={"edit-copy-btn"}>
                         {editLoading &&
-                          selectedItem.toString() === items.id.toString() ? (
+                        selectedItem.toString() === items.id.toString() ? (
                           <ClipLoader
                             color="#808080"
                             loading={editLoading}
@@ -354,7 +385,7 @@ function GigActiveSingleDay(props) {
                           />
                         )}
                         {copyLoading &&
-                          selectedItem.toString() === items.id.toString() ? (
+                        selectedItem.toString() === items.id.toString() ? (
                           <ClipLoader
                             color="#808080"
                             loading={copyLoading}
@@ -370,11 +401,16 @@ function GigActiveSingleDay(props) {
                         )}
                       </Box>
                     </div>
-                    {setArr.includes(new Date(items.startdate).toDateString()) ? null : < Divider className="divider-line" />}
+                    {setArr.includes(
+                      new Date(items.startdate).toDateString()
+                    ) ? null : (
+                      <Divider className="divider-line" />
+                    )}
                   </div>
                 )
               );
-            }) :
+            })
+          ) : (
             <div className="main-app-grid">
               <div style={{ textAlign: "center" }}>
                 <img
@@ -384,7 +420,7 @@ function GigActiveSingleDay(props) {
                 />
               </div>
             </div>
-          }
+          )}
 
           {/* <div className={'topHeader'} >
           <img src={HeaderImage} alt="name" className={'topHeaderImg'} />

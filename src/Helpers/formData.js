@@ -6,7 +6,6 @@ import { ACTIONS } from "../store/actions";
 import { dispatchUpdateUserObject } from "../store/dispatchers/userDispatcher";
 
 export const getFormData = (object) => {
-
   let newObj = {
     ...object,
   };
@@ -18,7 +17,6 @@ export const getFormData = (object) => {
   if (object.day_type === "single") {
     delete newObj["enddate"];
   }
-
 
   const formData = new FormData();
   Object.keys(newObj).forEach((key) => formData.append(key, object[key]));

@@ -152,9 +152,9 @@ function GigActiveMultipleDay(props) {
   };
 
   /*------Code Added-----*/
-  const filteredGigs = multipleDayActiveGig.filter(gig =>
+  const filteredGigs = multipleDayActiveGig.filter((gig) =>
     gig.position.toLowerCase().includes(props.search.toLowerCase())
-  )
+  );
 
   return (
     <div className="main-app-grid">
@@ -167,7 +167,7 @@ function GigActiveMultipleDay(props) {
         </div>
       ) : (
         <div className="gig-multiple-holder" style={{ minHeight: "350px" }}>
-          {filteredGigs.length > 0 ?
+          {filteredGigs.length > 0 ? (
             filteredGigs.map((items) => {
               return (
                 items.status === "active" && (
@@ -205,9 +205,17 @@ function GigActiveMultipleDay(props) {
                         <p className={"status-p"}>
                           <span
                             className={"status"}
-                            style={{ background: "var(--error)" }}
+                            style={{
+                              background: `${
+                                items.confirm_count == items.vacancies
+                                  ? `var(--success)`
+                                  : items.confirm_count === 0
+                                  ? `var(--error)`
+                                  : `var(--warning)`
+                              }`,
+                            }}
                           ></span>{" "}
-                          {`0/${items.vacancies}`}
+                          {`${items.confirm_count}/${items.vacancies}`}
                         </p>
                         <Heading3Bold
                           text={items.position}
@@ -239,25 +247,26 @@ function GigActiveMultipleDay(props) {
                               fontWeight={700}
                               className={"heading6medium"}
                               color={Colors.nightGray}
-                              text={`${new Date(items.starttime).toString() ===
+                              text={`${
+                                new Date(items.starttime).toString() ===
                                 "Invalid Date"
-                                ? `${items.starttime + ` - ` + items.endtime}`
-                                : new Date(
-                                  `${items.starttime}`
-                                ).toLocaleTimeString("en-US", {
-                                  hour: "numeric",
-                                  minute: "numeric",
-                                  hour12: true,
-                                }) +
-                                ` - ` +
-                                new Date(
-                                  `${items.endtime}`
-                                ).toLocaleTimeString("en-US", {
-                                  hour: "numeric",
-                                  minute: "numeric",
-                                  hour12: true,
-                                })
-                                }`}
+                                  ? `${items.starttime + ` - ` + items.endtime}`
+                                  : new Date(
+                                      `${items.starttime}`
+                                    ).toLocaleTimeString("en-US", {
+                                      hour: "numeric",
+                                      minute: "numeric",
+                                      hour12: true,
+                                    }) +
+                                    ` - ` +
+                                    new Date(
+                                      `${items.endtime}`
+                                    ).toLocaleTimeString("en-US", {
+                                      hour: "numeric",
+                                      minute: "numeric",
+                                      hour12: true,
+                                    })
+                              }`}
                             />
                           </Box>
                           <Box className={"infoBox"}>
@@ -290,33 +299,33 @@ function GigActiveMultipleDay(props) {
                           </Box>
                           {(items.status === "completed" ||
                             items.status === "cancel") && (
-                              <Box className={"infoBox"}>
-                                <Small
-                                  color={Colors.lightGray}
-                                  className={"small"}
-                                  text={"Status"}
-                                />
-                                <Heading5Medium
-                                  fontWeight={700}
-                                  className={"heading6medium"}
-                                  color={
-                                    items.status === "completed"
-                                      ? Colors.success
-                                      : Colors.error
-                                  }
-                                  text={
-                                    items.status === "completed"
-                                      ? "Completed"
-                                      : "Cancelled"
-                                  }
-                                />
-                              </Box>
-                            )}
+                            <Box className={"infoBox"}>
+                              <Small
+                                color={Colors.lightGray}
+                                className={"small"}
+                                text={"Status"}
+                              />
+                              <Heading5Medium
+                                fontWeight={700}
+                                className={"heading6medium"}
+                                color={
+                                  items.status === "completed"
+                                    ? Colors.success
+                                    : Colors.error
+                                }
+                                text={
+                                  items.status === "completed"
+                                    ? "Completed"
+                                    : "Cancelled"
+                                }
+                              />
+                            </Box>
+                          )}
                         </div>
                       </div>
                       <Box className={"edit-copy-btn"}>
                         {editLoading &&
-                          selectedItem.toString() === items.id.toString() ? (
+                        selectedItem.toString() === items.id.toString() ? (
                           <ClipLoader
                             color="#808080"
                             loading={editLoading}
@@ -332,7 +341,7 @@ function GigActiveMultipleDay(props) {
                         )}
 
                         {copyLoading &&
-                          selectedItem.toString() === items.id.toString() ? (
+                        selectedItem.toString() === items.id.toString() ? (
                           <ClipLoader
                             color="#808080"
                             loading={copyLoading}
@@ -351,7 +360,8 @@ function GigActiveMultipleDay(props) {
                   </>
                 )
               );
-            }) :
+            })
+          ) : (
             <div className="main-app-grid">
               <div style={{ textAlign: "center" }}>
                 <img
@@ -361,8 +371,10 @@ function GigActiveMultipleDay(props) {
                 />
               </div>
             </div>
-          }
-          {filteredGigs.length > 0 ? <Divider className="divider-line" /> : null}
+          )}
+          {filteredGigs.length > 0 ? (
+            <Divider className="divider-line" />
+          ) : null}
           {/* {multipleDayCompleteGig.length > 0 &&
             multipleDayCompleteGig.map((items) => {
               return (
