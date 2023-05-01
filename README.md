@@ -1,4 +1,4 @@
-# Work Briefly Frontend
+# Workify Frontend
 
 ## Pages that can be found in the project
 
